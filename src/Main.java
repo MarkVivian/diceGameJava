@@ -26,6 +26,9 @@ To check for random values we can use different methods like:
             System.out.println("choose a number between 1 and 6");
             int player = input.nextInt();
 
+            /*
+            will get the values between 1 and 5
+            */
             int computer = rand.nextInt(6) + 1;
             System.out.println("the player rolled a " + player + " and the computer rolled a " + computer);
             if(player > 6){
@@ -44,7 +47,7 @@ To check for random values we can use different methods like:
 to lower can be used to convert a string to its lower case version.
     string.toLowerCase();
 to upper can be used to convert a string to its higher case version.
-    string.toLowerCase();
+    string.toUpperCase();
                 */
                 String user = trial.nextLine().toLowerCase();
 
@@ -79,21 +82,14 @@ it is mostly used with strings.
             System.out.println("do you wish to try again? ");
             String user = input.nextLine().toLowerCase();
 
-                /*
-the objects.equals() is similar to comparing two things with an equal sign:
-        name = "Mark"
-        object.equals(name, "Mark")
-        name.equals("Mark")
-        name == "Mark"
-it is mostly used with strings.
-                */
+
             if (Objects.equals(user, "no") || user.equals("n")) {
                 check = false;
             }
 
         }
     }
-    public static void choice(){
+    public void choice(){
         Scanner choice = new Scanner(System.in);
         System.out.println("Welcome to the dice game \n");
         System.out.println("what do you wish to do:");
@@ -109,7 +105,9 @@ it is mostly used with strings.
             System.out.println("the value entered is not usable");
         }
     }
+
     public static void main(String[] args) {
-        choice();
+        Main game = new Main();
+        game.choice();
     }
 }
